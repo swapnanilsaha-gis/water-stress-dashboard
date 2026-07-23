@@ -1,0 +1,41 @@
+{
+  "name": "water-stress-bengaluru",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Web GIS dashboard for the M.Sc. dissertation: Predictive Urban Water Stress Mapping and Decentralized Infrastructure Siting in Bengaluru — A GeoAI Approach.",
+  "author": "Swapnanil Saha",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "chart.js": "^4.4.3",
+    "framer-motion": "^11.3.8",
+    "leaflet": "^1.9.4",
+    "leaflet-simple-map-screenshoter": "^0.5.0",
+    "leaflet.markercluster": "^1.5.3",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
+    "react-leaflet": "^4.2.1",
+    "react-leaflet-cluster": "^2.1.0",
+    "react-router-dom": "^6.24.1"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.21",
+    "@types/leaflet.markercluster": "^1.5.6",
+    "@types/node": "^20.19.43",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4"
+  }
+}

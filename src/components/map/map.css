@@ -1,0 +1,149 @@
+/* ---- Leaflet dark-theme overrides to match the "Deep Water" palette ---- */
+
+.leaflet-container {
+  background: #0a1520;
+  font-family: "Rubik", "Segoe UI", system-ui, sans-serif;
+}
+
+/* Zoom control */
+.leaflet-bar {
+  border: none !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4) !important;
+}
+.leaflet-bar a {
+  background: rgba(15, 34, 49, 0.85) !important;
+  color: #e2e8f0 !important;
+  border-color: rgba(148, 197, 214, 0.14) !important;
+  backdrop-filter: blur(8px);
+}
+.leaflet-bar a:hover {
+  background: #13293b !important;
+  color: #22d3ee !important;
+}
+
+/* Attribution + scale */
+.leaflet-control-attribution {
+  background: rgba(10, 21, 32, 0.7) !important;
+  color: #64748b !important;
+  font-size: 10px;
+}
+.leaflet-control-attribution a {
+  color: #94a3b8 !important;
+}
+.leaflet-control-scale-line {
+  background: rgba(10, 21, 32, 0.7);
+  color: #94a3b8;
+  border-color: rgba(148, 197, 214, 0.3);
+}
+
+/* ---- Popups (Item 10: rounded, refined typography) ---- */
+.map-popup-wrapper .leaflet-popup-content-wrapper {
+  background: rgba(13, 30, 44, 0.97);
+  color: #E2E8F0;
+  border: 1px solid rgba(148, 197, 214, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px);
+}
+.map-popup-wrapper .leaflet-popup-tip {
+  background: rgba(13, 30, 44, 0.97);
+  border: 1px solid rgba(148, 197, 214, 0.22);
+}
+.map-popup-wrapper .leaflet-popup-content {
+  margin: 14px 16px;
+  line-height: 1.5;
+}
+.map-popup h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #F1F5F9;
+  margin: 0 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(148, 197, 214, 0.16);
+  letter-spacing: -0.01em;
+}
+.map-popup table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.map-popup td {
+  padding: 3px 0;
+  vertical-align: top;
+}
+.map-popup td:first-child {
+  color: #94A3B8;
+  padding-right: 18px;
+  white-space: nowrap;
+}
+.map-popup td:last-child {
+  color: #F1F5F9;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+.map-popup p {
+  margin: 0;
+  font-size: 13px;
+  color: #94A3B8;
+  font-variant-numeric: tabular-nums;
+}
+.leaflet-popup-close-button {
+  color: #94A3B8 !important;
+  font-size: 20px !important;
+  padding: 8px 8px 0 0 !important;
+}
+.leaflet-popup-close-button:hover {
+  color: #F1F5F9 !important;
+}
+
+/* Smooth hover transitions on vector paths (Item 10) */
+.leaflet-interactive {
+  transition: fill-opacity 180ms ease, stroke-width 180ms ease, stroke 180ms ease;
+}
+
+/* ---- Borewell clusters ---- */
+.bw-cluster-wrap {
+  background: transparent;
+}
+.bw-cluster {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(248, 113, 113, 0.9), rgba(220, 38, 38, 0.75));
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  font-family: "Rubik", "Segoe UI", system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 0 16px rgba(248, 113, 113, 0.5);
+}
+
+/* Screenshoter: hide its default UI (we trigger via our own button) */
+.leaflet-control-simpleMapScreenshoter {
+  display: none !important;
+}
+
+/* When printing, let the map fill the page cleanly */
+@media print {
+  .leaflet-control-zoom,
+  .leaflet-control-attribution {
+    display: none !important;
+  }
+}
+
+/* Individual borewell dot (marker + divIcon, cluster-compatible) */
+.bw-dot-wrap {
+  background: transparent;
+}
+.bw-dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: #f87171;
+  border: 1px solid #7f1d1d;
+  box-shadow: 0 0 4px rgba(248, 113, 113, 0.6);
+}

@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-abyss font-body text-[16.5px] leading-[1.65] text-ink-primary antialiased;
+    background-image:
+      radial-gradient(1000px 700px at 85% -5%, rgba(14, 165, 233, 0.10), transparent 60%),
+      radial-gradient(900px 600px at 0% 30%, rgba(45, 212, 191, 0.07), transparent 55%);
+    background-attachment: fixed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-semibold tracking-tight text-ink-primary;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  /* Comfortable reading measure for long-form paragraphs */
+  .prose-measure {
+    max-width: 72ch;
+  }
+
+  /* Accessible focus ring across the app */
+  :where(a, button, [tabindex], input, select, textarea):focus-visible {
+    outline: 2px solid theme("colors.primary");
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: theme("colors.abyss");
+  }
+  ::-webkit-scrollbar-thumb {
+    background: theme("colors.surface-2");
+    border-radius: 8px;
+    border: 2px solid theme("colors.abyss");
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1c3a52;
+  }
+}
+
+@layer components {
+  /* Glassmorphism surface — the core visual motif of the dashboard */
+  .glass {
+    @apply border border-hairline bg-surface/60 backdrop-blur-md;
+    box-shadow: theme("boxShadow.glass");
+  }
+
+  .glass-hover {
+    @apply transition-all duration-300;
+  }
+  .glass-hover:hover {
+    @apply border-primary/45 bg-surface/85;
+    box-shadow: theme("boxShadow.glow-soft");
+    transform: translateY(-3px);
+  }
+
+  /* Interactive card: lift, glow and a subtle top highlight on hover */
+  .card-interactive {
+    @apply relative overflow-hidden transition-all duration-300 ease-out;
+  }
+  .card-interactive::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.55), transparent);
+    opacity: 0;
+    transition: opacity 300ms ease;
+  }
+  .card-interactive:hover::after {
+    opacity: 1;
+  }
+  .card-interactive:hover {
+    @apply -translate-y-1 border-primary/45;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45), theme("boxShadow.glow-soft");
+  }
+
+  /* Link-style rows that respond to pointer */
+  .row-interactive {
+    @apply transition-colors duration-200 hover:bg-white/[0.06];
+  }
+
+  /* Eyebrow label used above section titles */
+  .eyebrow {
+    @apply text-[13.5px] font-semibold tracking-wide text-primary/85;
+  }
+}
+
+@layer utilities {
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-br from-primary via-secondary to-accent-deep bg-clip-text text-transparent;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+@layer components {
+  /* Consistent vertical rhythm between major blocks on a page */
+  .section-gap {
+    @apply mt-12 lg:mt-16;
+  }
+  .section-gap-sm {
+    @apply mt-8 lg:mt-10;
+  }
+}
