@@ -7,7 +7,7 @@ Siting in Bengaluru: A GeoAI Approach”** - Swapnanil Saha (Symbiosis Institute
 > A concise 6-section interactive Web GIS: Home, Study Area, Methodology,
 > Prediction, Infrastructure and Conclusion. The Prediction and Infrastructure
 > maps are vectorised from the classified Rasters and are fully interactive (Model Toggle, Clickable Wards).
-
+[Dashboard preview](public/assets/dashboard-preview.png)
 
 ## Run Locally
 
