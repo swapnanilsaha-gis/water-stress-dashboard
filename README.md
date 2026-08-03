@@ -11,25 +11,25 @@ Siting in Bengaluru: A GeoAI Approach”** - Swapnanil Saha (Symbiosis Institute
 
 
 
-## Run locally
+## Run Locally
 
 ```bash
 npm install
 npm run dev      # http://localhost:5173
 ```
 
-## Build for production
+## Build for Production
 
 ```bash
 npm run build    # outputs to dist/
 npm run preview  # preview the production build
 ```
 
-## Tech stack
+## Tech Stack
 
 React 18 · Vite · TypeScript · Tailwind CSS · React Router · Framer Motion ·
 
-## Project structure
+## Project Structure
 
 ```
 src/
@@ -41,7 +41,7 @@ src/
 public/assets/  # web-optimized figures (maps, charts, diagrams)
 ```
 
-## Interactive map data
+## Interactive Map Data
 
 The Study Area page (`/study-area`) runs a Leaflet Web GIS built from the real data:
 
