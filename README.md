@@ -9,8 +9,6 @@ Siting in Bengaluru: A GeoAI Approach”** - Swapnanil Saha (Symbiosis Institute
 > maps are vectorised from the classified Rasters and are fully interactive (Model Toggle, Clickable Wards).
 
 
-
-
 ## Run Locally
 
 ```bash
