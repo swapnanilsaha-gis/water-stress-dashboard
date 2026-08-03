@@ -8,7 +8,6 @@ Siting in Bengaluru: A GeoAI Approach”** - Swapnanil Saha (Symbiosis Institute
 > Prediction, Infrastructure and Conclusion. The Prediction and Infrastructure
 > maps are vectorised from the classified Rasters and are fully interactive (Model Toggle, Clickable Wards).
 ![Home Page](public/assets/dashboard-preview.png)
-![Study Area Map](public/assets/dashboard-oreview-25.png)
 ![Prediction View](public/assets/dashboard-preview-3.png)
 ![Infrastructure Siting](public/assets/dashboard-preview-4.png)
 
