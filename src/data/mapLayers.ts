@@ -19,16 +19,16 @@ export interface Basemap {
 
 /**
  * Basemaps. All providers send CORS headers so the map can be exported to PNG.
- * Dark Matter is the default to match the dashboard's "Deep Water" theme.
+ * Esri Dark Gray Canvas is the default (keyless; CARTO now watermarks keyless tiles) to match the dashboard's "Deep Water" theme.
  */
 export const basemaps: Basemap[] = [
   {
     id: "dark",
     label: "Dark",
-    url: "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
-    attribution: "&copy; OpenStreetMap &copy; CARTO",
+    url: "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+    attribution: "Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors",
     swatch: "#0b1622",
-    maxZoom: 20,
+    maxZoom: 16,
   },
   {
     id: "satellite",
@@ -41,10 +41,10 @@ export const basemaps: Basemap[] = [
   {
     id: "streets",
     label: "Streets",
-    url: "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
-    attribution: "&copy; OpenStreetMap &copy; CARTO",
+    url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+    attribution: "Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors",
     swatch: "#e8e5df",
-    maxZoom: 20,
+    maxZoom: 19,
   },
 ];
 
